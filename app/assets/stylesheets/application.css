@@ -3,3 +3,9 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+/* change this later */
+
+h1 {
+	color: white;
+}
