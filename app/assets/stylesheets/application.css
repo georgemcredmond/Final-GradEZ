@@ -1,4 +1,5 @@
 body {
+	font-family: arial;
 	background-image: url(slender.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -28,4 +29,29 @@ h1 {
 	height: 42px;
 	margin: 0;
 	padding: 0;
+}
+
+#logo {
+	display: block;
+	float: left;
+	height: 30px;
+	width: 120px;
+	margin: 6px 68px 0 15px;
+}
+
+.topnav2 {
+	list-style: none;
+	display: block;
+	width: auto;
+	height: 42px;
+	margin: 0;
+	padding: 0;
+}
+
+.topnav2 > li {
+	display: list-item;
+	float: left;
+	position: relative;
+	margin-right: 40px;
+	z-index: 10;
 }
