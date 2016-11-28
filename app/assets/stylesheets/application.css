@@ -57,3 +57,30 @@ h1 {
 	margin: 10px 40px 0;
 	z-index: 10;
 }
+
+/*Main Page*/
+
+.main_logo {
+	display: block;
+	text-align: center;
+	margin: 0;
+	}
+
+#signup {
+	display: block;
+	margin: 0;
+	text-align: center;
+}
+
+.btn_link {
+	color: red;
+	text-decoration: none;
+}
+.btn_link<a:hover {
+    text-decoration: underline;
+}
+#buttons_h1 {
+	color: red;
+	font-family: Arial;
+	text-shadow: 1px 1px black;
+}
