@@ -1,8 +1,11 @@
 body {
 	font-family: arial;
-	background-image: url(slender.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
+	background-color: #B0C4DE;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
 }
 
 /* change this later */
@@ -14,13 +17,13 @@ h1 {
 
 #navbar {
 	display: block;
-	background: #FFEC8B;
-	box-shadow: 0 2px 1px #53868B;
+	background: #00BFFF;
+	box-shadow: 0 2px 1px #6495ED;
 	height: 42px;
-	margin-bottom: 5px;
+	margin-bottom: 0px;
 	width: auto;
 	min-width: 960px;
-	border-radius: 4px;
+	border-radius: 44px;
 }
 
 .topnav1 {
@@ -35,10 +38,10 @@ h1 {
 
 #logo {
 	display: block;
+	font-family: 'Questrial', sans-serif;
 	float: left;
-	height: 30px;
-	width: 120px;
-	margin: 6px 68px 0 15px;
+	font-size: 36px;
+	margin: 0 68px 0 15px;
 }
 
 .topnav2 {
@@ -60,6 +63,39 @@ h1 {
 
 /*Main Page*/
 
+.jumbotron {
+	background: url(main_img.jpg);
+	background-size: cover;
+	height: 500px;
+	border-radius: 40px;
+	text-align: center;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+#jumbo 	{
+	color: white;
+	font-family: 'Questrial', sans-serif;
+	font-size: 148px;
+	text-shadow: 2px 2px black;
+}
+#jumbo1 {
+	color:white;
+	font-family: 'Questrial', sans-serif;
+}
+
+.supporting h2{
+	text-align: center;
+}
+.btn {
+	font-size: 16px;
+	border-radius: 4px;
+	margin: auto;
+	padding: 10px 20px;
+	color: #30627E;
+	width: 200px;
+	border: 1px solid #30627E;
+	text-transform: uppercase;
+}
 .main_logo {
 	display: block;
 	text-align: center;
