@@ -1,13 +1,15 @@
 class CoursesController < ApplicationController
-before_filter :authenticate_teacher!
+#before_filter :authenticate_teacher!
   
   def index
-    @message="All Created Courses Should List Here"
-     @courses = Course.all
+    @message="Current course list:"
+     @courses=Course.all
+     @course=Course.new
   end
   
   def show
-    @course = Course.new
+    @course=Course.new
+   @courses=Course.all
   end
   
   def new
@@ -15,13 +17,13 @@ before_filter :authenticate_teacher!
   end
   
   def create
-    @course = Course.new(params[:name])
-    if @course.save
+    @course = Course.new(course_params)
+    @course.save
       flash[:notice] = "Successfully created a course."
-      redirect_to @course
-    else
-      render :action => 'new'
-    end
+      redirect_to courses_path
+    
+      #render :action => 'new'
+    
   end
   
   def edit
@@ -44,5 +46,11 @@ before_filter :authenticate_teacher!
     flash[:notice] = "Successfully removed the course."
     redirect_to courses_url
   end
+
+private
+  def course_params
+    params.require(:course).permit(:name)
+  end
+
 end
 

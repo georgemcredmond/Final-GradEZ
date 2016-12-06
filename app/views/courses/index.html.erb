@@ -1,7 +1,16 @@
 <div class="info_area">
 <br/>
-<%= @message %>
+	<p class="teach"><%= @message %></p>
+	<% @courses.each do |course| %>
+	 <%= course.name %>
+	<% end %>
+<br/>
+<hr/>
+<p class="teach">Create some new courses:</p>
+<%= form_for @course do |f|%>
+	<%= f.text_field :name %>
+	<%= f.submit "Create Course" %>
 
-    <% @courses.each do |course| %>
-    <% end %>
-   </div>
+<% end %>
+
+</div>
