@@ -16,8 +16,8 @@
       <div id="navbar">
         <ul class="topnav1">
   <% if current_teacher %>
-    <li>Welcome <%= current_teacher.email if current_teacher %></li>
-    <li><%= link_to "Sign Out", destroy_teacher_session_path, method: :delete %>
+    <li class="navright">Welcome <%= current_teacher.email if current_teacher %></li>
+    <li class="navright"><%= link_to "Sign Out", destroy_teacher_session_path, method: :delete %>
   <% else %>
     <%= link_to "Sign In", new_teacher_session_path %></li>
   <% end %> 
@@ -26,8 +26,7 @@
         <% if current_teacher %>
         <ul class="topnav2">
           <li><a href="/courses/show">Classes</a></li>
-          <li>Messages</li>
-          <li><a href="/teachers/<%= current_teacher.id %>">Account</a></li>
+          <li><a href="/teachers/edit">Account</a></li>
         </ul>
         <% end %>
       </div>
