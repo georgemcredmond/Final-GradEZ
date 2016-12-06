@@ -1,7 +1,9 @@
+<div class="info_area">
 <h2 class="teach">Add a new class to your account:</h2>
 
 <%= form_for @course do |f| %>
-  <%= f.label :Course_name %><br>
+  <%= f.label :course_name %><br>
   <%= f.text_area :name %><br>
   <%= f.submit "Create" %>
 <% end %>
+</div>

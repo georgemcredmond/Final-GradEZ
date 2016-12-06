@@ -144,6 +144,10 @@ h1 {
 
 /*teacher pages*/
 
+.info_area {
+	height: 500px;
+}
+
 .teach {
 	font-family: 'Questrial', sans-serif;
 	font-size: 20px;

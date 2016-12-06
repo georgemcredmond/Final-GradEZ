@@ -2,11 +2,12 @@ class CoursesController < ApplicationController
 before_filter :authenticate_teacher!
   
   def index
-    @message="please work"
+    @message="All Created Courses Should List Here"
+     @courses = Course.all
   end
   
   def show
-    
+    @course = Course.new
   end
   
   def new
@@ -14,7 +15,7 @@ before_filter :authenticate_teacher!
   end
   
   def create
-    @course = Course.new(params[:course])
+    @course = Course.new(params[:name])
     if @course.save
       flash[:notice] = "Successfully created a course."
       redirect_to @course
