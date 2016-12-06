@@ -4,13 +4,14 @@ class CoursesController < ApplicationController
   def index
     @message="Current course list:"
      @courses=Course.all
-     @course=Course.new
+     @course=Course.new 
   end
   
   def show
     @course=Course.new
-   @courses=Course.all
-  end
+    @courses=Course.all
+    @course = Course.find(params[:id])  
+end
   
   def new
     @course = Course.new

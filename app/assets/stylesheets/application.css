@@ -10,8 +10,10 @@ a:visited {
 
 /* change this later */
 
-h1 {
-	color: white;
+#delete {
+	font-size: 12px;
+	background-color: white;
+	border-radius: 3px;
 }
 /*top navigation styling */
 

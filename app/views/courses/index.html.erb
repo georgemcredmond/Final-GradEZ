@@ -2,7 +2,8 @@
 <br/>
 	<p class="teach"><%= @message %></p>
 	<% @courses.each do |course| %>
-	 <%= course.name %>
+	 <p class="teach"><%= course.name %> 
+	 <span id="delete"><%= link_to 'Delete', course_path(course), method: :delete %></span></p>
 	<% end %>
 <br/>
 <hr/>
