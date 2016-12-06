@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LMS</title>
+    <title>GradEZ - Online Grading</title>
     <%= csrf_meta_tags %>
+    <%= favicon_link_tag 'favicon.ico' %>
+
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -21,13 +23,31 @@
   <% end %> 
         </ul>
         <a href="/" id="logo">GradEZ</a>
+        <% if current_teacher %>
         <ul class="topnav2">
-          <li>Classes</li>
+          <li><a href="/courses/show">Classes</a></li>
           <li>Messages</li>
-          <li>Account</li>
+          <li><a href="/teachers/<%= current_teacher.id %>">Account</a></li>
         </ul>
+        <% end %>
       </div>
     </div>
     <%= yield %>
+   <br/>
+   <div class="footer"> 
+      <div class="container"> 
+        <div class="row"> 
+          <div class="col-md-2"> 
+            <div class="copy">© GradEZ</div> 
+          </div> 
+            <div class="col-md-10"> 
+              <ul class="nav nav-pills pull-right"> 
+                <li><a href="#">FAQ</a></li> 
+                <li><a href="#">Contact</a></li> 
+              </ul> 
+            </div> 
+        </div> 
+      </div>
+    </div>
   </body>
 </html>
